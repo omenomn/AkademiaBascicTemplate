@@ -17,6 +17,10 @@ class ComposerStaticInit529a18a8e83ca7e9e4b1250f5d277276
             'Illuminate\\Support\\' => 19,
             'Illuminate\\Contracts\\' => 21,
         ),
+        'D' => 
+        array (
+            'Dandaj\\AkademiaBasicTemplate\\' => 29,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -27,6 +31,10 @@ class ComposerStaticInit529a18a8e83ca7e9e4b1250f5d277276
         'Illuminate\\Contracts\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Dandaj\\AkademiaBasicTemplate\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
