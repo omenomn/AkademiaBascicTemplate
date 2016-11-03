@@ -1,0 +1,20 @@
+{
+    "name": "daniel/akademia-basic-template",
+    "description": "template package for G DATA Akademia",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel",
+            "email": "daniel@omega323.com"
+        }
+    ],    
+    "autoload": {
+        "psr-4": {
+            "Dandaj\\AkademiaBasicTemplate\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.3"
+    }
+}
