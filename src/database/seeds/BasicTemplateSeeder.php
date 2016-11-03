@@ -124,6 +124,7 @@ class BasicTemplateSeeder extends Seeder
             'template_id' => $template->id,
             'title' => 'Strona startowa',
             'slug' => 'start',
+            'start_page' => true,
             'tags' => 'fds,dsfsdfds,dsfsdf',
             'content' => '<h1>your code</h1>',
         ]);
