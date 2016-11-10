@@ -811,7 +811,6 @@ footer {
     padding-right: 25px;
     font-size: 12px;
     color: #505050;
-    text-transform: uppercase;
     margin-right: 20px; }
     #log-in_box input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
@@ -1399,5 +1398,25 @@ html body .modal {
       font-size: 18px;
       text-transform: none;
       font-weight: 500; }
-
-
+.red_box li {
+    color: white;
+    margin-bottom: 0;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.more-button {
+    cursor: pointer;
+}
+.toast-info {
+    background: #de2d26;
+}
+  
+#inputEmail {
+    text-transform: lowercase;
+}
+  
+  
+  
+  

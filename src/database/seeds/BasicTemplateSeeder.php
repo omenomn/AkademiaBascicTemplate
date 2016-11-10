@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Template;
+use App\Models\TemplateType;
 use App\Models\Style;
 use App\Models\StyleLink;
 use App\Models\Head;
@@ -62,14 +63,6 @@ class BasicTemplateSeeder extends Seeder
 
         $stylesToSave = [];
 
-        foreach ($styles as $style) {
-            $stylesToSave[] = new StyleLink([
-                    'style_id' => $style->id,
-                    'link' => null,
-                    'type' => 'file',
-                ]);
-        }
-
         $stylesToSave[] = new StyleLink([
             'style_id' => null,
             'link' => '//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600,600italic,400italic,300italic,300',
@@ -112,9 +105,25 @@ class BasicTemplateSeeder extends Seeder
             'type' => 'link',
         ]);
 
+        $stylesToSave[] = new StyleLink([
+            'style_id' => null,
+            'link' => '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css',
+            'type' => 'link',
+        ]);
+
+        foreach ($styles as $style) {
+            $stylesToSave[] = new StyleLink([
+                    'style_id' => $style->id,
+                    'link' => null,
+                    'type' => 'file',
+                ]);
+        }
+
         $head->styleLinks()->saveMany($stylesToSave);
 
-        $template = Template::create([
+        $pageType = TemplateType::where('slug', 'page')->first();
+
+        $template = $pageType->templates()->create([
             'name' => 'Główny szablon',
             'slug' => 'main_template',
             'head_id' => $head->id,
