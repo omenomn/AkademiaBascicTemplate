@@ -416,14 +416,15 @@
 <script src="{{ asset('sources/js/lang-all.js') }}" type="text/javascript"></script>
 <script src="//cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js" type="text/javascript"></script>
 <script src="//malsup.github.com/jquery.cycle2.js"></script>
+@if (session('loginError'))
 <script>
     $(document).ready(function() {
-        @if (count($errors) > 0)
             toastr.options.preventDuplicates = true;
-            toastr.info('{{ $errors->first() }}')
-        @endif
+            toastr.options.closeButton = true;
+            toastr.info('{{ session('loginError') }}')
     })
 </script>
+@endif
 {!! seminarsScript() !!}
 <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
